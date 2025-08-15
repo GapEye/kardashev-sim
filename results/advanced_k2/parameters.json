@@ -1,0 +1,77 @@
+{
+  "docs": {
+    "horizon_years": "Simulation length; longer horizon allows later phases to accrue area/power.",
+    "phases.phase0_days": "Initial setup (no launches); affects when production/launching starts.",
+    "phases.phase1_days": "Ramp-up phase; by default launches still gated until phase 2 in this model.",
+    "phases.phase2_days": "Steady expansion phase when daily PV can be launched.",
+    "production.uptime_fraction": "Multiplies all manufacturing line throughputs.",
+    "production.learning_curve_b": "Learning-curve exponent; lower b accelerates throughput growth over time.",
+    "launch_strategy.cadence_per_day": "Global cap on packages launched per day across rails.",
+    "launch_strategy.target_a_AU_range": "Single deployment band; sets mean radius for OD and 1/r^2 power.",
+    "launch_strategy.target_bands_AU": "Multiple deployment bands; area split by optional band_weights; per-band OD and power tracked.",
+    "launch_strategy.band_weights": "Optional weights for area split across bands; normalized to 1.",
+    "caps.max_growth_multiplier": "Upper bound on replication growth multiplier (limits exponential growth).",
+    "resources.usable_mass_mercury_kg": "Estimated mass of usable materials from Mercury composition model.",
+    "transport.fleet_power_MW": "Tug fleet electrical power; caps daily deployed area.",
+    "transport.area_per_MW_per_day": "Scaling from fleet power to deployed area per day (model constant).",
+    "beaming.tx_conversion": "Transmitter conversion efficiency factor in delivered power.",
+    "beaming.pointing": "Pointing/phase efficiency factor in delivered power.",
+    "beaming.rx_conversion": "Receiver conversion efficiency factor in delivered power.",
+    "beaming.earth_atmosphere": "Atmospheric transmission factor for delivered power to Earth.",
+    "collectors.efficiency_1AU": "Base PV efficiency at 1 AU for the default collector type.",
+    "collectors.degradation_per_year": "Annual PV degradation; reduces efficiency exponentially over years.",
+    "mercury_site.radiator_area_m2": "Thermal derating proxy; larger radiators reduce efficiency losses.",
+    "vehicles.launchers.mercury_mass_driver.cooldown_s": "Cooldown between shots; sets base launch cadence.",
+    "vehicles.launchers.mercury_mass_driver.mtbf_h": "Mean time between failures; with MTTR sets availability for cadence.",
+    "vehicles.launchers.mercury_mass_driver.mttr_h": "Mean time to repair; with MTBF sets availability for cadence.",
+    "targets.total_collector_area_m2": "Target cumulative area; summary reports time to reach if within horizon.",
+    "targets.optical_depth_max": "Reference OD threshold; reported OD is capped to this for readability."
+  },
+  "values": {
+    "caps.max_growth_multiplier": 1000000.0,
+    "resources.usable_mass_mercury_kg": 1.542503416419301e+18,
+    "horizon_years": 40,
+    "phases.phase0_days": 240,
+    "phases.phase1_days": 1825,
+    "phases.phase2_days": 10950,
+    "production.uptime_fraction": 0.92,
+    "production.learning_curve_b": 0.78,
+    "launch_strategy.cadence_per_day": 40000,
+    "launch_strategy.target_a_AU_range": [
+      0.38,
+      0.52
+    ],
+    "launch_strategy.target_bands_AU": [
+      [
+        0.38,
+        0.42
+      ],
+      [
+        0.42,
+        0.48
+      ],
+      [
+        0.48,
+        0.52
+      ]
+    ],
+    "launch_strategy.band_weights": null,
+    "transport.fleet_power_MW": 300.0,
+    "transport.area_per_MW_per_day": 50000.0,
+    "transport.area_cap_m2_per_day": 15000000.0,
+    "beaming.tx_conversion": 0.85,
+    "beaming.pointing": 0.97,
+    "beaming.rx_conversion": 0.85,
+    "beaming.earth_atmosphere": 0.92,
+    "beaming.total_chain_efficiency": 0.6447590000000001,
+    "collectors.efficiency_1AU": 0.28,
+    "collectors.degradation_per_year": 0.01,
+    "mercury_site.radiator_area_m2": 400000.0,
+    "vehicles.launchers.mercury_mass_driver.cooldown_s": 120.0,
+    "vehicles.launchers.mercury_mass_driver.mtbf_h": 4000.0,
+    "vehicles.launchers.mercury_mass_driver.mttr_h": 24.0,
+    "vehicles.launchers.mercury_mass_driver.availability": 0.9940357852882704,
+    "targets.total_collector_area_m2": 2000000000000.0,
+    "targets.optical_depth_max": 0.04
+  }
+}

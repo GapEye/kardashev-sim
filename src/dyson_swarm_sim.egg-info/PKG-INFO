@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: dyson-swarm-sim
+Version: 0.1.0
+Summary: Dyson Swarm construction & launch simulation
+Author: DysonSim
+License: MIT
+Keywords: dyson,swarm,simulation,space,simpy,pydantic
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.26
+Requires-Dist: pandas>=2.0
+Requires-Dist: pydantic>=2.5
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: networkx>=3.2
+Requires-Dist: simpy>=4.1
+Requires-Dist: matplotlib>=3.8
+Requires-Dist: tqdm>=4.66
+Provides-Extra: astro
+Requires-Dist: astropy>=5.3; extra == "astro"
+Requires-Dist: poliastro>=0.17; extra == "astro"
+Provides-Extra: opt
+Requires-Dist: pulp>=2.7; extra == "opt"
+Provides-Extra: parallel
+Requires-Dist: dask[complete]>=2024.1.0; extra == "parallel"
+
+# Dyson Swarm Construction & Launch Simulation
+
+This project simulates a multi-phase program to construct and deploy a Dyson Swarm using in-situ industrialization (Mercury focus), mass drivers, and alternative launch architectures. It provides a CLI to run scenarios, sweep parameters, and generate plots and CSV outputs.
+
+## Quickstart
+
+- Python 3.11+
+- Install in editable mode:
+
+```
+pip install -e .
+```
+
+- Run baseline scenario:
+
+```
+python -m ds.cli run --scenario data/scenarios/baseline.yaml --out results/baseline
+python -m ds.cli plot --run results/baseline
+```
+
+- Parameter sweep:
+
+```
+python -m ds.cli sweep --param production.uptime_fraction=0.7:0.95:0.05 --scenario data/scenarios/baseline.yaml --out results/sweep
+```
+
+## Structure
+
+See `src/ds/` for modules, `data/` for inputs, `tests/` for unit tests. All units are SI internally.
+
+## Assumptions (high-level)
+
+- Solar irradiance scales as 1/r^2; thermal equilibrium via radiative balance. PV derating with temperature.
+- Orbital mechanics approximated by analytic Hohmann/bi-elliptic where applicable; collector insertion from Mercury modeled with simple Δv budgeting and SRP-informed station-keeping margins.
+- Manufacturing modeled as process lines with throughput, energy, MTBF/MTTR, and learning curves; factories can replicate after a cycle.
+- Launch systems include Mercury mass driver (primary), solar-thermal steam launcher, and an electromagnetic sling with counter-mass (alternatives). Cadence limited by cooldown and maintenance.
+
+See `design_notes.md` for details and limitations.

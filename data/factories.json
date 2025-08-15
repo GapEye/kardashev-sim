@@ -1,0 +1,23 @@
+{
+	"nodes": {
+		"regolith_mining": {"kW": 500, "crew": 0, "mttr_h": 24, "mtbf_h": 5000, "throughput_t_per_day": 200},
+		"beneficiation": {"kW": 800, "throughput_t_per_day": 150},
+		"smelter": {"kW": 2000, "yield": {"aluminum": 0.18, "iron": 0.25, "silicon": 0.2}},
+		"pv_line": {"kW": 1500, "throughput_m2_per_day": 5000, "temp_limit_K": 350},
+		"reflector_line": {"kW": 700, "throughput_m2_per_day": 10000},
+		"structure_line": {"kW": 600, "throughput_kg_per_day": 30000},
+		"mass_driver_build": {"kW": 1200, "duration_days": 120}
+	},
+	"edges": [
+		["regolith_mining", "beneficiation"],
+		["beneficiation", "smelter"],
+		["smelter", "pv_line"],
+		["smelter", "structure_line"],
+		["structure_line", "mass_driver_build"]
+	],
+	"replication": {
+		"factory_kit_mass_kg": 250000,
+		"replication_factor": 1.6,
+		"replication_cycle_days": 120
+	}
+}

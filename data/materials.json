@@ -1,0 +1,8 @@
+{
+	"materials": {
+		"aluminum": {"rho": 2700, "yield_strength": 2.5e8, "embodied_energy_MJ_per_kg": 200},
+		"silicon": {"rho": 2330, "embodied_energy_MJ_per_kg": 200},
+		"glass": {"rho": 2500, "embodied_energy_MJ_per_kg": 25},
+		"carbon_fiber": {"rho": 1550, "embodied_energy_MJ_per_kg": 285}
+	}
+}

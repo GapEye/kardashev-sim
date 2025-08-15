@@ -1,0 +1,38 @@
+{
+	"$schema": "https://example.com/dyson/bodies.schema.json",
+	"bodies": [
+		{
+			"name": "Mercury",
+			"type": "planet",
+			"GM_km3_s2": 22031.86855,
+			"radius_m": 2439700,
+			"albedo": 0.119,
+			"mean_density_kg_m3": 5427,
+			"rot_period_hours": 1407.5,
+			"axial_tilt_deg": 0.03,
+			"orbital_a_AU": 0.387098,
+			"orbital_e": 0.2056,
+			"surface_temp_K_range": [100, 700],
+			"composition_mass_frac": {"Fe": 0.32, "SiO2": 0.30, "S": 0.02, "Others": 0.36},
+			"resource_availability": {
+				"iron_ore_grade": 0.55,
+				"silicates": 0.90,
+				"volatile_ppm": {"Na": 2500, "K": 1150, "S": 4000}
+			},
+			"mining_notes": "High day-night thermal swing; polar cold traps optional."
+		},
+		{
+			"name": "Earth",
+			"type": "planet",
+			"GM_km3_s2": 398600.4418,
+			"radius_m": 6371000,
+			"albedo": 0.306,
+			"rot_period_hours": 23.934,
+			"axial_tilt_deg": 23.44,
+			"orbital_a_AU": 1.0,
+			"orbital_e": 0.0167,
+			"surface_temp_K_range": [184, 330]
+		},
+		{ "name": "Sun", "type": "star", "luminosity_W": 3.828e26, "radius_m": 6.9634e8 }
+	]
+}

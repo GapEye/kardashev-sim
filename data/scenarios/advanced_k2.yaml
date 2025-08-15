@@ -1,0 +1,57 @@
+name: advanced_k2
+seed: 101
+horizon_years: 40
+phases:
+  phase0_days: 240
+  phase1_days: 1825
+  phase2_days: 10950
+targets:
+  total_collector_area_m2: 2.0e12
+  mean_orbit_a_AU: 0.45
+  orbit_bands_AU: [0.35, 0.55]
+  optical_depth_max: 0.04
+earth_bootstrap:
+  launches: 24
+  cargo_manifest_kg:
+    miners: 400000
+    isru_kits: 700000
+    power: 300000
+    robotics: 200000
+    mass_driver_parts: 600000
+mercury_site:
+  latitude_deg: 82.0
+  radiator_area_m2: 4.0e5
+production:
+  shift_hours: 24
+  uptime_fraction: 0.92
+  learning_curve_b: 0.78
+caps:
+  max_growth_multiplier: 1.0e6
+resources:
+  mining_depth_m: 10
+  utilization:
+    Fe: 1.0
+    SiO2: 0.2
+transport:
+  fleet_power_MW: 300
+  area_per_MW_per_day: 50000
+launch_strategy:
+  cadence_per_day: 40000
+  target_a_AU_range: [0.38, 0.52]
+  target_bands_AU:
+    - [0.38, 0.42]
+    - [0.42, 0.48]
+    - [0.48, 0.52]
+  use_solar_sails: true
+  staging_tug_fraction: 0.4
+  max_structural_g: 40
+uncertainty:
+  pv_efficiency_sigma: 0.015
+  yield_sigma: 0.08
+  failure_rate_scale: 1.1
+beaming:
+  tx_conversion: 0.85
+  pointing: 0.97
+  rx_conversion: 0.85
+  earth_atmosphere: 0.92
+

@@ -1,0 +1,33 @@
+name: fast_ramp
+seed: 123
+horizon_years: 20
+targets:
+  total_collector_area_m2: 1.2e12
+  mean_orbit_a_AU: 0.4
+  orbit_bands_AU: [0.35, 0.45]
+  optical_depth_max: 0.05
+earth_bootstrap:
+  launches: 16
+  cargo_manifest_kg:
+    miners: 300000
+    isru_kits: 450000
+    power: 250000
+    robotics: 150000
+    mass_driver_parts: 350000
+mercury_site:
+  latitude_deg: 80.0
+  radiator_area_m2: 2.0e5
+production:
+  shift_hours: 24
+  uptime_fraction: 0.9
+  learning_curve_b: 0.80
+launch_strategy:
+  cadence_per_day: 400
+  target_a_AU_range: [0.35, 0.45]
+  use_solar_sails: true
+  staging_tug_fraction: 0.3
+  max_structural_g: 35
+uncertainty:
+  pv_efficiency_sigma: 0.02
+  yield_sigma: 0.1
+  failure_rate_scale: 1.2

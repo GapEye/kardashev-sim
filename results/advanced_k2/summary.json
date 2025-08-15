@@ -1,0 +1,67 @@
+{
+  "years_to_target": null,
+  "total_area_m2": 188025000000.0,
+  "delivered_power_GW_at_1AU_equiv": 156471.77504765667,
+  "earth_mass_kg": 2400000,
+  "in_situ_fraction": 0.9,
+  "energy_kWh_total": 1.3272117086927852e+16,
+  "energy_per_m2_kWh_m2": 70586.98091704748,
+  "transport_MWh_total": 90252000.0,
+  "transport_energy_per_m2_kWh_m2": 0.48,
+  "materials": {
+    "collector_areal_density_kg_m2": 0.15,
+    "collector_mass_kg": 28203750000.0,
+    "structure_kg_total": 2273366626642161.5,
+    "resource_used_kg_total": 2387034957974269.5,
+    "resource_remaining_kg_final": 1.5401163814613268e+18
+  },
+  "bands": [
+    {
+      "index": 0,
+      "a_AU_mean": 0.4,
+      "cum_area_m2": 62675000000.0,
+      "optical_depth": 1.3928799017026262e-12,
+      "power_GW": 64388.405704430945
+    },
+    {
+      "index": 1,
+      "a_AU_mean": 0.44999999999999996,
+      "cum_area_m2": 62675000000.0,
+      "optical_depth": 1.100547082826767e-12,
+      "power_GW": 50874.7896923899
+    },
+    {
+      "index": 2,
+      "a_AU_mean": 0.5,
+      "cum_area_m2": 62675000000.0,
+      "optical_depth": 8.914431370896808e-13,
+      "power_GW": 41208.57965083582
+    }
+  ],
+  "efficiencies": {
+    "pv_eff_1au_base": 0.28,
+    "pv_eff_1au_end": 0.18731725014021305,
+    "thermal_derate": 1.0,
+    "beaming": {
+      "tx_conversion": 0.85,
+      "pointing": 0.97,
+      "rx_conversion": 0.85,
+      "earth_atmosphere": 0.92,
+      "chain": 0.6447590000000001
+    },
+    "effective_eff_1au_end": 0.12077448288315365
+  },
+  "transport": {
+    "fleet_power_MW": 300.0,
+    "area_per_MW_per_day": 50000.0,
+    "area_cap_m2_per_day": 15000000.0,
+    "implied_tug_count": 6000.0,
+    "tug_power_kW": 50.0,
+    "transport_MWh_total": 90252000.0
+  },
+  "caps": {
+    "max_growth_multiplier": 1000000.0,
+    "growth_multiplier_final": 1000000.0
+  },
+  "mass_driver_availability": 0.9940357852882704
+}

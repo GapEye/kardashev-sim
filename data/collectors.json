@@ -1,0 +1,18 @@
+{
+	"collector_types": {
+		"thin_film_pv_A": {
+			"area_m2": 10000,
+			"areal_density_kg_m2": 0.15,
+			"efficiency_1AU": 0.28,
+			"temp_coeff_per_K": -0.003,
+			"degradation_per_year": 0.01,
+			"packaged_volume_m3": 100,
+			"max_dynamic_pressure_Pa": 150
+		},
+		"reflector_microwave_B": {
+			"area_m2": 20000,
+			"areal_density_kg_m2": 0.08,
+			"efficiency_1AU": 0.22
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"launchers": {
+		"earth_to_transfer": {"payload_kg": 100000, "cost_MUSD": 150, "cadence_per_year": 12},
+		"mercury_mass_driver": {"muzzle_delta_v_m_s": 4500, "max_g": 50, "cooldown_s": 120, "mtbf_h": 4000, "mttr_h": 24}
+	},
+	"tugs": {
+		"elec_tug": {"Isp_s": 3000, "thrust_N": 2, "dry_kg": 500, "propellant_kg": 1500, "power_kW": 50, "fleet_power_MW": 100}
+	}
+}

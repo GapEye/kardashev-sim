@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dyson-swarm-sim"
+version = "0.1.0"
+description = "Dyson Swarm construction & launch simulation"
+requires-python = ">=3.11"
+readme = "README.md"
+authors = [{ name = "DysonSim" }]
+license = { text = "MIT" }
+keywords = ["dyson", "swarm", "simulation", "space", "simpy", "pydantic"]
+
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "pydantic>=2.5",
+  "pyyaml>=6.0",
+  "networkx>=3.2",
+  "simpy>=4.1",
+  "matplotlib>=3.8",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+astro = ["astropy>=5.3", "poliastro>=0.17"]
+opt = ["pulp>=2.7"]
+parallel = ["dask[complete]>=2024.1.0"]
+
+[project.scripts]
+dyson-sim = "ds.cli:main"
+
+[tool.pytest.ini_options]
+minversion = "7.4"
+addopts = "-q"
+pythonpath = ["src"]
