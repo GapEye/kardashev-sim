@@ -1,0 +1,26 @@
+# Python package files
+src/dyson_swarm_sim.egg-info/
+*.egg-info/
+build/
+dist/
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
